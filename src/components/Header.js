@@ -8,25 +8,21 @@ export default class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            imgStyle: {
-                width: '3%'
-            },
-            headerStyle: {
-                borderStyle: 'solid',
-                borderBottomWidth: '10px',
-                borderLeftWidth: '0px',
-                borderRightWidth: '0px',
-                borderWidth: '0px',
-                paddingBottom: '100px'
-            }
         };
     }
 
 
     render() {
         return (
-            <header className='pb-5'>
-                teste
+            <header>
+                <div className="row">
+                    <div className="col-2">
+                        oi
+                    </div>
+                    <div className="col-2">
+                        oi
+                    </div>
+                </div>
             </header>
         );
     }

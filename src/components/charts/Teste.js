@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 import $ from "jquery";
-import '../Style.css'
 
 //Número de macroEstados
 
