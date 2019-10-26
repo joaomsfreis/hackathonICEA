@@ -1,0 +1,44 @@
+.title {
+    background-color: orangered;
+    text-align: center;
+    color: #FFF;
+    border-radius: 15px;
+    margin: 0 1em;
+    padding: 20px;
+}
+
+.body-background{
+    background-color: #D3D3D3;
+    margin: 0 2em;
+    padding: 1.5em;
+
+}
+
+.body-background-solution{
+    background-color: 	#FFB95E;
+    margin: 0 2em;
+    padding: 1.5em;
+
+}
+
+.body-background2{
+    background-color: #D3D3D3;
+    border-radius: 0 0 15px 15px;
+    margin: 0 2em;
+    padding: 1.5em;
+    
+}
+
+.body-background-solution2{
+    background-color: 	#FFB95E;
+    margin: 0 2em;
+    border-radius: 0 0 15px 15px;
+    padding: 1.5em;
+
+}
+
+.paragrafo{
+    padding: 2em;
+    text-align: center;
+
+}

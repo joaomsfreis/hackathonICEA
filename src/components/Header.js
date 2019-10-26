@@ -14,15 +14,16 @@ export default class Header extends Component {
 
     render() {
         return (
-            <header>
+            <header className="mb-2">
                 <div className="row">
                     <div className="col-2">
-                        oi
-                    </div>
-                    <div className="col-2">
-                        oi
+                        <img src={clubPetro} alt="clubPetro"/>
                     </div>
                 </div>
+                <div className="title">
+                        <h1>Grupo Kalango Soluções</h1>
+                </div>
+
             </header>
         );
     }
