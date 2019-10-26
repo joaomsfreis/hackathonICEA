@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 import $ from "jquery";
 import axios from 'axios';
-import '../Style.css'
+
 
 const basePath = 'http://hackaengine-dot-red-equinox-253000.appspot.com/sales';
 
@@ -20,7 +20,7 @@ export default class perDay extends Component {
     async componentWillMount() {
         console.log("MOUNT");
 
-        const start = 21;
+        const start = 20;
         const end = 24;
 
         const days = [];
@@ -74,10 +74,11 @@ export default class perDay extends Component {
         return (
             <div className="container">
                 <div className="row">
-                <div className="col-12 col-md-4 paragrafo">
-                    <h5>Gráfico de valor total de vendas por dia</h5>
+                <div className="col-12 col-md-5 paragrafo">
+                    <h5>LOG</h5>
                 </div>
-                    <div className="col-12 col-md-8">
+                    <div className="col-12 col-md-7 paragrafo">
+                        <h5>Gráfico como o valor vendido por dia</h5>
                         < Line
                             data={{
                                 labels: days,
@@ -92,19 +93,31 @@ export default class perDay extends Component {
                             }}
                             options={{
                                 legend: {
-                                    display: true,
+                                    display: false,
                                     position: "top"
                                 },
                                 scales: {
                                     yAxes: [{
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: "Valor total de vendas(R$)",
+                                            fontSize: 18
+                                          },
                                         ticks: {
                                             beginAtZero: true,
                                             fontSize: 15,
                                         }
                                     }],
                                     xAxes: [{
+                                        
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: "Dias",
+                                            fontSize: 18
+                                          },
                                         ticks: {
                                             fontSize: 12
+
                                         }
                                     }]
                                 },
@@ -112,7 +125,6 @@ export default class perDay extends Component {
                                 elements: { line: { tension: 0 } }
                             }}
                         />
-
                     </div>
 
                 </div>

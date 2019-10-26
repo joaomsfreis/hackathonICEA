@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
 .title {
     background-color: orangered;
-    text-align: center;
+    text-align: left;
     color: #FFF;
-    border-radius: 15px;
-    margin: 0 1em;
-    padding: 20px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+img.title2 {
+    text-align: left;
+    widht: 0.1;    
 }
 
 .body-background{
@@ -16,6 +23,12 @@
 
 .body-background-solution{
     background-color: 	#FFB95E;
+    margin: 0 2em;
+    padding: 1.5em;
+
+}
+
+.body-background-solution div{
     margin: 0 2em;
     padding: 1.5em;
 
@@ -40,5 +53,15 @@
 .paragrafo{
     padding: 2em;
     text-align: center;
+    background-color: white;
+    box-shadow: 10px 10px;
+    border: 1px #838383;
 
 }
+
+.sombra-grafico{
+    background-color: black;
+    /* box-shadow: 10px 10px;
+    border: 1px #000; */
+}
+
