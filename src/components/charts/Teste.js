@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import $ from "jquery";
 
 //Número de macroEstados
@@ -29,40 +29,41 @@ export default class Teste extends Component {
         return (
             <div>
 
-                <Bar
+                < Line
                     data={{
-                        labels: ["1", "2", "3"],
-                        datasets: [
-                            {
-                                data: [1, 2, 3],
-                                backgroundColor: "rgba(60, 141, 188, 1)"
-                            }]
+                        labels: ["1", "2", "3", "4"],
+                        datasets: [{
+                            label: "teste",
+                            data: [2,3,1,5],
+                            backgroundColor: "black",
+                            borderColor: "black",
+                            fill: false,
+                            cod: 1
+                        }]
                     }}
                     options={{
                         legend: {
-                            display: false
+                            display: true,
+                            position: "top"
                         },
                         scales: {
                             yAxes: [{
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: "Quantidade",
-                                    fontSize: 18
-                                },
                                 ticks: {
-                                    fontSize: 15
+                                    beginAtZero: true,
+                                    fontSize: 15,
                                 }
                             }],
                             xAxes: [{
                                 ticks: {
-                                    beginAtZero: true,
-                                    fontSize: 15
+                                    fontSize: 12
                                 }
                             }]
                         },
+                        tooltips: { mode: "point", intersect: false },
+                        elements: { line: { tension: 0 } }
                     }}
-
                 />
+
             </div>
         );
     }
