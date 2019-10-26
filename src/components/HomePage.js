@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Teste from './charts/Teste'
+import Header from './Header'
 
 export default class HomePage extends Component {
 
     render() {
         return (
-            <div className = "row">
-                <div className="bg-primary">oi</div>
+            <div>
+                <Header />
                 <Teste />
             </div>
         )

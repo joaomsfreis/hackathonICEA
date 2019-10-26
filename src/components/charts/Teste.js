@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 import $ from "jquery";
+import '../Style.css'
 
 //Número de macroEstados
 
@@ -27,43 +28,84 @@ export default class Teste extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-md-6">
+                        < Line
+                            data={{
+                                labels: ["1", "2", "3", "4"],
+                                datasets: [{
+                                    label: "teste",
+                                    data: [2, 3, 1, 5],
+                                    backgroundColor: "black",
+                                    borderColor: "black",
+                                    fill: false,
+                                    cod: 1
+                                }]
+                            }}
+                            options={{
+                                legend: {
+                                    display: true,
+                                    position: "top"
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontSize: 15,
+                                        }
+                                    }],
+                                    xAxes: [{
+                                        ticks: {
+                                            fontSize: 12
+                                        }
+                                    }]
+                                },
+                                tooltips: { mode: "point", intersect: false },
+                                elements: { line: { tension: 0 } }
+                            }}
+                        />
 
-                < Line
-                    data={{
-                        labels: ["1", "2", "3", "4"],
-                        datasets: [{
-                            label: "teste",
-                            data: [2,3,1,5],
-                            backgroundColor: "black",
-                            borderColor: "black",
-                            fill: false,
-                            cod: 1
-                        }]
-                    }}
-                    options={{
-                        legend: {
-                            display: true,
-                            position: "top"
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    fontSize: 15,
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    fontSize: 12
-                                }
-                            }]
-                        },
-                        tooltips: { mode: "point", intersect: false },
-                        elements: { line: { tension: 0 } }
-                    }}
-                />
+                    </div>
 
+                    <div className="col-12 col-md-6">
+                        < Line
+                            data={{
+                                labels: ["1", "2", "3", "4"],
+                                datasets: [{
+                                    label: "teste",
+                                    data: [2, 3, 1, 5],
+                                    backgroundColor: "black",
+                                    borderColor: "black",
+                                    fill: false,
+                                    cod: 1
+                                }]
+                            }}
+                            options={{
+                                legend: {
+                                    display: true,
+                                    position: "top"
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontSize: 15,
+                                        }
+                                    }],
+                                    xAxes: [{
+                                        ticks: {
+                                            fontSize: 12
+                                        }
+                                    }]
+                                },
+                                tooltips: { mode: "point", intersect: false },
+                                elements: { line: { tension: 0 } }
+                            }}
+                        />
+
+                    </div>
+                </div>
             </div>
         );
     }
